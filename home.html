@@ -89,7 +89,11 @@
               <div class="card  p-4">
                 <p class="section-header text-center">About</p>
                 <p class="small-font">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  The goal of this project was to practice A/B testing, and use statistical tests
+                  to understand the results. Interfaces A and B were versions of a cacti shopping site,
+                  where users can select cacti to purchase. I was able to collect data from users who were asked to
+                  add $150 worth of cacti to their cart. I hypothesized about time to completion and return rate for both
+                  interfaces, and used calculate t-score, chi-squared, and p-values to understand my data.
                 </p>
 
               </div>
@@ -142,7 +146,10 @@
             <div class="col">
               <div class="card  p-4">
                 <p class="section-header text-center">Hypotheses</p>
-                <p class="small-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+                <p class="small-font">
+                  I wrote null hypotheses for the metrics: time to completion and return rate. The following null hypotheses
+                  can be rejected by the data, in which case the corresponding alternative hypothesis can be accepted.
+                </p>
                <div class="border-div">
                 <p class="medium-font"> Time to Completion</p>
                 <p class="small-font">
@@ -182,7 +189,12 @@
               <div class="card  p-4 d-flex align-items-center">
                 <p class="section-header text-center">Data Collection</p>
                 <p class="small-font">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  I collected data from 28 users. The link given to the users opens as
+                  interface A or B randomly. After users completed the task (add $150 worth of cacti to
+                  cart and checkout), the following data was stored: type of page loaded (a, b, or c for checkout page),
+                  time of page load and time of each button click. An example of this data is shown below.
+                  After filtering the data, I was able to calculate the time to completion for each user, as well as record
+                  whether a user returned to the cacti page. Examples of these calculations are also shown below.
                 </p>
                 <img class="img-fluid" src="images/data1.png">
                 <br>
@@ -201,7 +213,10 @@
               <div class="card  p-4">
                 <p class="section-header text-center">Results</p>
                 <p class="small-font">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  Using the above data I was able to calculate T-score and P-Value for the time to completion
+                  metric, and chi-squared and p-value for the return rate metric. A p-value under 0.05 would imply
+                  that the differences seen between interface A and B are significant; this was not the case, so the
+                  following findings are not significant, and my null hypotheses were not rejected.
                 </p>
 
                 <div class="row">
@@ -226,10 +241,26 @@
           <div class="row my-4 mt-5" >
             <div class="col">
               <div class="card  p-4">
-                <p class="section-header text-center">Conclusion</p>
+                <p class="section-header text-center"> Takeaways</p>
                 <p class="small-font">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                  The differences seen between interfaces A and B were not significant (p-values above 0.05),
+                  I have concluded the following:
+                 </p>
+                <ul class="small-font" style="list-style: circle">
+                  <li class="mt-1"> A key flaw in this experiment was the limited number of users (28). With this few users,
+                  having a low p-value for either of my metrics is difficult. Having more users would allow real trends
+                  to show in a statistically significant way. </li>
+                  <li class="mt-1"> The data showed that site B performed better than site A in terms of the time to completion metric. This may have been due to the fact
+                  that site B had less users, or chance. As this data the finding was not significant, I cannot make a
+                  real conclusion about which interface is better</li>
+                  <li class="mt-1"> I speculate that a lower return rate is superior to a higher one: a shopping site should be intuitive and easy to navigate
+                    enough such that when a user decides to checkout, they are not met with any surprises and thus have no reason to return
+                    back to the shopping page. The data showed that the return rate for interface A was lower than for interface B. As stated
+                  in the hypotheses section, I believe that this is due to the fact that site A displayed the cart total ($) whereas site B did not.
+                  In theory, this would give users less reason to return to the shopping page after navigation to checkout.</li>
+
+
+                </ul>
 
               </div>
             </div>
